@@ -1,0 +1,82 @@
+﻿<div data-role="header">
+    <h1>Project Manage</h1>
+    <a href="#list" data-icon="back" class="back ui-btn-left">Back</a>
+</div>
+<div data-role="content">
+ <form id="frmWorkLog">
+    <div data-role="fieldcontain">
+   
+        <label for="sNametBaseDepartment">部门</label>
+        <input type="text" id="sNametBaseDepartment" name="sNametBaseDepartment" disabled="disabled" value="<%= sNametBaseDepartment %>" />
+        
+        <input type="hidden" id="sGuidtBaseDepartment" name="sGuidtBaseDepartment" value="<%= sGuidtBaseDepartment %>" />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="sNametBaseDepartmentSub">支部门</label>
+        <input type="text" id="sNametBaseDepartmentSub" name="sNametBaseDepartmentSub" disabled="disabled" value="<%= sNametBaseDepartmentSub %>" />
+        <input type="hidden" id="sGuidtBaseDepartmentSub" name="sGuidtBaseDepartmentSub" value="<%= sGuidtBaseDepartmentSub %>" />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="sNametBaseEmployee">员工</label>
+        <input type="text" id="sNametBaseEmployee" name="sNametBaseEmployee" disabled="disabled" value="<%= sNametBaseEmployee %>" />
+        <input type="hidden" id="sGuidtBaseEmployee" name="sGuidtBaseEmployee" value="<%= sGuidtBaseEmployee %>" />        
+        </div>
+
+        <div data-role="fieldcontain">
+        <label for="sNametBaseEmployee1"><a href="javascript:void(0)" id="emp">员工1</a></label>
+        <input type="text" id="sNametBaseEmployee1" name="sNametBaseEmployee1" disabled="disabled" value="<%= sNametBaseEmployee %>" />
+        <input type="hidden" id="sGuidtBaseEmployee1" name="sGuidtBaseEmployee" value="<%= sGuidtBaseEmployee %>" />        
+        </div>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" value="">
+        <div data-role="fieldcontain">
+        <label for="CreateDate">日期</label>
+        <input type="date" id="CreateDate" name="CreateDate"  data-role="datebox" data-options='{"mode": "calbox","enablePopup":true}' value="<%= CreateDate %>" />              
+        </div>
+        <div data-role="fieldcontain">
+        <label for="nHoursCount">小时</label>
+        <input type="text" id="nHoursCount" name="nHoursCount" value="<%= nHoursCount %>" />
+        </div>
+        <div data-role="fieldcontain">
+        <label for="sGuidtWorkOrder">项目名称</label>
+        <select name="sGuidtWorkOrder" id="sGuidtWorkOrder" class="needsclick" data-native-menu="true">
+        
+        </select>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="sLogText">工作内容</label>
+        <textarea cols="40" rows="8" name="sLogText" id="sLogText"><%= sLogText %></textarea>
+        </div>
+        <div data-role="fieldcontain">
+        <label for="bOvertime">加班</label>
+        <input type="checkbox" name="bOvertime" id="bOvertime" <% print(bOvertime ? 'checked="checked"' : '') %>  />
+        
+        <input type="hidden" id="sGuidWorkLog" name="sGuidWorkLog" value="<%= sGuidWorkLog %>" />
+        <input type="hidden" id="sGuidWorkLogDetail" name="sGuidWorkLogDetail" value="<%= sGuidWorkLogDetail %>" />
+        </div>
+   
+    
+     <div class="ui-body ui-body-b">
+         <fieldset class="ui-grid-a">
+             <!--<input data-role="submit" type="submit" value="Login" />-->
+             <a href="javascript:void(0)" data-role="button" data-inline="true" id="save">save</a>
+         </fieldset>
+     </div>
+    </form>
+   
+   
+
+
+</div>
+<div data-role="footer">
+    <h3>copy right</h3>
+</div>
+
+<div data-role="page" id="empPop" data-overlay-theme="e">
+<div data-role="header">
+    <h2>Dialog</h2>
+  </div>
+        <div data-role="content">
+    <p>I am a dialog</p>
+  </div>
+    </div>

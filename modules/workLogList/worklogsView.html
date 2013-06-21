@@ -1,0 +1,34 @@
+﻿<div data-role="header">
+    <h1>Project Manage</h1>
+    <div data-role="controlgroup" data-type="horizontal">
+    <a href="#" data-role="button" data-icon="home">login</a>
+    <a href="#search" data-role="button" data-icon="search" >Search</a>
+    <a href="#add" data-role="button" data-icon="plus" id="add">add</a>    
+    </div>
+</div>
+<div data-role="content">
+    <ul data-role="listview" data-inset="true" id="worklogList">                        
+    </ul>
+    <div data-role="popup" id="openPopUp" data-theme="d" data-overlay-theme="b" class="ui-content"
+        style="max-width: 340px; padding-bottom: 2em; display: none">
+        <h3>提示</h3>
+        <p>是否真的要删除日志</p>
+        <a href="#" data-role="button" data-rel="back" data-theme="b" data-inline="true"
+            id="btnDelete">是</a> <a href="#" data-role="button" data-rel="back" data-inline="true">否</a>
+    </div>
+    <p>
+        <a href="javascript:void(0)" data-role="button" data-inline="true" id="previous"
+            style="display: none">Previous</a> <a href="javascript:void(0)" data-role="button"
+                data-inline="true" id="next" style="display: none">Next</a>
+    </p>
+</div>
+<div data-role="footer">
+    <h3>copy right</h3>
+</div>
+<script type="text/x-jsrender" id="worklogListTemplate">
+{{for data}}
+<li><a href="#worklogdetail/{{:sGuidWorkLog}}/{{:sGuid}}"><h4>{{:dCreateDate}}{{:sNametBaseEmployee}}{{:sNametWorkOrder}}</h4><p>
+        {{:sLogText}}</p></a>
+<a href="javascript:void(0)" data-bind="{{:sGuidWorkLog}}/{{:sGuid}}" class="btn btn-info message-delete-action" data-rel="popup" data-position-to="window" data-transition="pop" data-icon="delete" id="btnDel">Purchase album</a></li>
+{{/for}}
+</script>

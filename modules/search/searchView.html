@@ -1,0 +1,32 @@
+﻿<div data-role="header">
+    <h1>Project Manage</h1>
+    <a href="#list" data-icon="back" data-rel="back" class="back ui-btn-left">Back</a>
+</div>
+
+<div data-role="content">
+
+<ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Search</li>       
+
+        <li data-role="fieldcontain">
+           <label for="txtStartDate">开始日期:</label>
+           <input type="date" name="txtStartDate" id="txtStartDate" data-role="datebox" data-options='{"mode": "calbox"}' value="<%=CreateDateStart %>">                               
+        </li>
+
+        <li data-role="fieldcontain">
+           <label for="txtEndDate">结束日期:</label>
+            <input type="date" name="txtEndDate" id="txtEndDate" data-role="datebox" data-options='{"mode": "calbox"}' value="<%=CreateDateEnd %>">     
+        </li>
+
+       
+
+        <li data-role="fieldcontain">
+            <input type="button" id="btnSearch" value="Search" />
+        </li>
+    </ul>
+    
+</div>
+<div data-role="footer">
+    <h3>copy right</h3>
+</div>
+
